@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter.woff2') format('woff2');
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, white,#A2CAFF);
+  min-height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: 'Inter';
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1em;
+  text-align:center;
+}
+
+h1 {
+  font-family: 'Inter';
+  font-size: 56px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 48px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-family: 'Inter';
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 118%;
+  margin: 0 0 24px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+/*Glass Effect is scrapped but its actually just the box card thing*/
+.GlassContainer {
+    flex: 1;
+    min-width: 50rem;
+    min-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
+    
+    @media (max-width: 1024px) {
+        min-width: 60vw;
+        max-width: 40vw;
+
+    }
+}
+
+.GlassContent {
+    position: relative;
+    display: block;
+    z-index: 100;
+    overflow: hidden;
+    border-radius: var(--corner-radius);
+    pointer-events: auto;
+
+    @media (max-width: 1024px) {
+    }
+}
+
+.socialmedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  margin-top: 10vh;
+}
+
+.socialmedia a{
+  color: black;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: auto;
+  margin-top: 2vh;
+  gap: 4rem;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1000px;
+}
+
+.topnav a {
+    color: black;
+    font-size: 1.05rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    @media (max-width: 1024px){
+  }
+
+}
+
+.topnav a:hover {
+  opacity: 0.5;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: x-small;
+  opacity: 0.5;
+  margin-bottom: 0.2rem;
+}
+
+.shortfooter{
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: small;
+  padding: 10px;
+  opacity: 0.4;
+}
