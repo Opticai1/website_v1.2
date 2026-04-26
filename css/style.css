@@ -9,10 +9,15 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -32,6 +37,11 @@ h1 {
     font-size: 48px;
     margin: 20px 0;
   }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin: 16px 0;
+  }
 }
 h2 {
   font-family: 'Inter';
@@ -40,91 +50,187 @@ h2 {
   font-size: 24px;
   line-height: 118%;
   margin: 0 0 24px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
   }
 }
 
 /*Glass Effect is scrapped but its actually just the box card thing*/
 .GlassContainer {
     flex: 1;
-    min-width: 50rem;
-    min-height: 40vh;
+    width: 90vw;
+    max-width: 70rem;
+    min-height: 60vh;
+    max-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 28rem;
-    margin-top: 5rem;
+    margin-bottom: 50vh;
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(50px);
-    border-radius: 1px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 40px;
+    border-radius: 10px;
+    border-inline: 2px solid rgba(255, 255, 255, 0.6);
     box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
-    
-    @media (max-width: 1024px) {
-        min-width: 60vw;
-        max-width: 40vw;
+
+    @media (max-width: 768px) {
+      max-height: 100vh;
+      width: 90vw;
+      max-width: 80vw;
 
     }
 }
 
-.GlassContent {
-    position: relative;
-    display: block;
-    z-index: 100;
-    overflow: hidden;
-    border-radius: var(--corner-radius);
-    pointer-events: auto;
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0D00FF, #76CFFF);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 0.3rem;
+}
 
-    @media (max-width: 1024px) {
-    }
+.topbar p {
+  font-family: 'Inter';
+  font-weight: 500;
+  color: white;
+  margin-left: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.fa-solid.fa-bars {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+}
+
+.GlassContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.welcome_message {
+  margin: 2rem;
+
+  @media (max-width: 768px) {
+    margin-top: 5vh;
+  }
+}
+
+.hello_message {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin: 0vh;
+  }
 }
 
 .socialmedia{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5vh;
-  margin-top: 10vh;
+  gap: 2rem;
+  margin-top: 4vh;
+
+   @media (max-width: 768px) {
+    margin: 2rem;
+    
+  }
 }
 
 .socialmedia a{
   color: black;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
 
-.topnav {
+.buttons_group{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  margin: auto;
-  margin-top: 2vh;
-  gap: 4rem;
-  background: rgba(0, 0, 0, 0.07);
-  padding: 0.8rem 1.5rem;
-  border-radius: 1000px;
-}
+  margin: 4vh;
+  gap: 3rem;
+  width: 80%;
 
-.topnav a {
-    color: black;
-    font-size: 1.05rem;
-    font-family: 'Inter';
-    font-weight: 500;
-    display: flex;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-
-    @media (max-width: 1024px){
+  @media (max-width: 768px) {
+    display: grid;
+    margin: auto;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    width: 70%;
   }
-
 }
 
-.topnav a:hover {
+.work_button{
+  padding: 0.4rem 1.2rem;
+  background-color: white;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  color: black;
+  font-family: 'Inter';
+  font-size: 1.3rem;
+  font-weight: 300;
+  box-shadow: -3px 3px black;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 5rem;
+    font-size: 1.1rem;
+  }
+}
+
+.about_button{
+  padding: 0.4rem 1.2rem;
+  background-color: white;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  color: black;
+  font-family: 'Inter';
+  font-size: 1.3rem;
+  font-weight: 300;
+  box-shadow: -3px 3px black;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+.contact_button {
+  padding: 0.4rem 1.2rem;
+  background-color: white;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  color: black;
+  font-family: 'Inter';
+  font-size: 1.3rem;
+  font-weight: 300;
+  box-shadow: -3px 3px black;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.3rem 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+.contact_button:hover,
+.about_button:hover,
+.work_button:hover {
   opacity: 0.5;
 }
 
