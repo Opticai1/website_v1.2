@@ -76,7 +76,7 @@ h2 {
     box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
 
     @media (max-width: 768px) {
-      max-height: 100vh;
+      max-height: 120vh;
       width: 90vw;
       max-width: 80vw;
 
@@ -109,6 +109,11 @@ h2 {
   top: 1rem;
   right: 1rem;
   font-size: 1.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    right: 0.5rem;
+  }
 }
 
 .GlassContent {
@@ -228,6 +233,7 @@ h2 {
   }
 }
 
+.fa-solid.fa-bars:hover,
 .contact_button:hover,
 .about_button:hover,
 .work_button:hover {
