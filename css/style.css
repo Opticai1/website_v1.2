@@ -56,13 +56,20 @@ h2 {
   }
 }
 
+p {
+  font-family: 'Inter';
+  font-weight: 300;
+  color: var(--text-p);
+  line-height: 1.5em;
+}
+
 /*Glass Effect is scrapped but its actually just the box card thing*/
 .GlassContainer {
     flex: 1;
     width: 90vw;
     max-width: 70rem;
     min-height: 60vh;
-    max-height: 100vh;
+    max-height: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50vh;
@@ -76,7 +83,7 @@ h2 {
     box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
 
     @media (max-width: 768px) {
-      max-height: 120vh;
+      max-height: 100%;
       width: 90vw;
       max-width: 80vw;
 
@@ -159,10 +166,19 @@ h2 {
 
 .socialmedia a{
   color: black;
+  transition-duration: 0.1s;
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
   }
+}
+
+.socialmedia :hover {
+  transform: scale(1.05);
+}
+
+.socialmedia :active {
+  transform: translateY(1px);
 }
 
 .buttons_group{
@@ -182,40 +198,8 @@ h2 {
   }
 }
 
-.work_button{
-  padding: 0.4rem 1.2rem;
-  background-color: white;
-  border: 3px solid rgba(0, 0, 0, 0.5);
-  color: black;
-  font-family: 'Inter';
-  font-size: 1.3rem;
-  font-weight: 300;
-  box-shadow: -3px 3px black;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    padding: 0.3rem 5rem;
-    font-size: 1.1rem;
-  }
-}
-
-.about_button{
-  padding: 0.4rem 1.2rem;
-  background-color: white;
-  border: 3px solid rgba(0, 0, 0, 0.5);
-  color: black;
-  font-family: 'Inter';
-  font-size: 1.3rem;
-  font-weight: 300;
-  box-shadow: -3px 3px black;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    padding: 0.3rem 1rem;
-    font-size: 1.1rem;
-  }
-}
-
+.work_button,
+.about_button,
 .contact_button {
   padding: 0.4rem 1.2rem;
   background-color: white;
@@ -226,6 +210,7 @@ h2 {
   font-weight: 300;
   box-shadow: -3px 3px black;
   cursor: pointer;
+  transition-duration: 0.08s;
 
   @media (max-width: 768px) {
     padding: 0.3rem 1rem;
@@ -237,7 +222,14 @@ h2 {
 .contact_button:hover,
 .about_button:hover,
 .work_button:hover {
-  opacity: 0.5;
+  transform: scale(1.05);
+}
+
+.about_button:active,
+.work_button:active,
+.contact_button:active {
+  box-shadow: -1px 1px black;
+  transform: translateY(1px);
 }
 
 footer {
