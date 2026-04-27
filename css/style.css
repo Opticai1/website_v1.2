@@ -218,11 +218,13 @@ p {
   }
 }
 
-.fa-solid.fa-bars:hover,
-.contact_button:hover,
-.about_button:hover,
-.work_button:hover {
-  transform: scale(1.05);
+@media (min-width: 1024px) {
+  .fa-solid.fa-bars:hover,
+  .contact_button:hover,
+  .about_button:hover,
+  .work_button:hover {
+    transform: scale(1.05);
+  }
 }
 
 .about_button:active,

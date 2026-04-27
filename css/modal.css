@@ -1,7 +1,22 @@
+.about_topbar {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(90deg, #0D00FF, #76CFFF);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 0.5rem;
+}
+
+.about_topbar p {
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
 .about_modal {
   width: 80vw;
   max-width: 60rem;
-  min-height: 80vh;
+  min-height: 70vh;
   max-height: 60rem;
   position: fixed;
   top: 50%;
@@ -9,23 +24,13 @@
   transform: translate(-50%, -50%);
   display: none;
   margin-bottom: 25vh;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(50px);
   border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
   
-}
-
-.about_topbar {
-    display: flex;
-    width: 100%;
-    background: linear-gradient(90deg, #0D00FF, #76CFFF);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.about_topbar p {
-    margin-left: 1rem;
-    color: white;
-    font-weight: 500;
 }
 
 .about_close {
