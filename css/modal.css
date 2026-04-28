@@ -4,7 +4,7 @@
   z-index: 100;
   width: 70vw;
   max-width: 60rem;
-  max-height: 70%;
+  max-height: calc(100vh - 100px);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -21,7 +21,6 @@
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 2rem;
-    max-height: 100vh;
   }
   
 }
