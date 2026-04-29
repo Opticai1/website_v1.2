@@ -4,46 +4,98 @@
   z-index: 100;
   width: 70vw;
   max-width: 60rem;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 60px);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
   margin-bottom: 25vh;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(50px);
   border-radius: 10px;
   overflow-y: auto;
   outline: 2px solid rgba(255, 255, 255, 0.6);
   box-shadow: 1px 5px 3px rgba(154, 160, 185, 0.26), 0 15px 30px rgba(166, 173, 201, 0.134);
+  display: none;
 
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 2rem;
+
   }
-  
 }
 
-.about_modal_content li {
+.about_header{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.about_header p{
+  line-height: 0.5rem;
+}
+
+.about_header h2{
+  color: black;
+  font-size: 2rem;
+}
+
+.about_info {
+  margin-left: 2rem;
+
+  @media (max-width: 768px){
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.circle {
+  height: 10rem;
+  width: 10rem;
+  background-color:dimgray;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1rem;
+  overflow: hidden;
+  outline: solid 2px gray;
+  box-shadow: 0px 0px 24px 7px rgb(156, 164, 255, 0.4);
+
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.5);
+
+}
+
+.about_container li {
   font-family: 'Inter';
   line-height: 1.25rem;
   font-weight: 300;
 }
 
-.about_modal_content h2 {
+.about_container h2 {
   margin-top: 1rem;
   font-size: 1.75rem;
   color: black;
 }
 
-.about_modal_content p{
+.about_container p{
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.about_modal_content h3 {
-  margin-bottom: -1.25rem;
+.about_container h3 {
+  margin-top: 1.5rem;
   margin-left: 1rem;
   font-family: 'Inter';
   font-size: 1.25rem;
@@ -86,4 +138,12 @@
 
 /*work modal*/
 
+.work_modal_content {
+  margin: 1rem;
+}
+
 /*contact modal*/
+
+.contact_modal_content {
+  margin: 1rem;
+}
