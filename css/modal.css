@@ -142,6 +142,30 @@
   margin: 1rem;
 }
 
+.container {
+  columns: 3;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+}
+
+.container img {
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+
+  @media (max-width: 768px) {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
 /*contact modal*/
 
 .contact_modal_content {
