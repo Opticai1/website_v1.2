@@ -7,7 +7,7 @@ const files = fs.readdirSync(folder).filter(f =>
 );
 
 const html = files.map(f => 
-  `  <img src="assets/gfx_images/${f}" alt="">`
+  `  <img src="assets/gfx_images/${f}" alt="gfx_full">`
 ).join('\n');
 
 console.log('<div class="container">\n' + html + '\n</div>');

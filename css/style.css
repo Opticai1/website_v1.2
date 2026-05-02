@@ -12,13 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
   overflow: hidden;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 h1,
@@ -106,6 +100,9 @@ p {
   font-weight: 500;
   color: white;
   margin-left: 1rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -136,6 +133,9 @@ p {
 
 .welcome_message {
   margin: 2rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 
   @media (max-width: 768px) {
     margin-top: 5vh;
@@ -145,6 +145,9 @@ p {
 .hello_message {
   margin-top: -2rem;
   margin-bottom: 2rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 
   @media (max-width: 768px) {
     margin: 0vh;
