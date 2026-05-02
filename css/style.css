@@ -6,7 +6,7 @@
 body {
   margin: 0;
   background: linear-gradient(180deg, white,#A2CAFF);
-  min-height: 100vh;
+  min-height: 100dvh;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,7 @@ p {
       width: 90vw;
       max-width: 80vw;
       margin: 0;
+      max-height: 90dvh;
 
     }
 }
