@@ -145,7 +145,7 @@
   margin: 1rem;
 }
 
-.work_container p{
+.work_container .disclaimer{
   padding: 0;
   text-align: center;
   margin-top: 5rem;
