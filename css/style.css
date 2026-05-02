@@ -61,14 +61,11 @@ p {
 .GlassContainer {
     z-index: 1;
     flex: 1;
+    max-height: 90vh;
     width: 90vw;
-    max-width: 70rem;
-    min-height: 50vh;
-    max-height: 40rem;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50vh;
-    margin-top: 10vh;
     display: flex;
     justify-content: center;
     background: rgba(255, 255, 255, 0.4);
@@ -129,11 +126,12 @@ p {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin-top: 4rem;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 
 .welcome_message {
-  margin: 2rem;
+  margin-bottom: 2rem;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -189,13 +187,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4vh;
+  margin-top: 4rem;
   gap: 3rem;
   width: 80%;
 
   @media (max-width: 768px) {
     display: grid;
     gap: 1rem;
+    margin: 0;
   }
 }
 
@@ -214,7 +213,7 @@ p {
   transition-duration: 0.08s;
 
   @media (max-width: 768px) {
-    padding: 0.3rem 3rem;
+    padding: 0.3rem 4rem;
     font-size: 1.1rem;
   }
 }
