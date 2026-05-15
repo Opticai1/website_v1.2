@@ -61,7 +61,7 @@ p {
 .GlassContainer {
     z-index: 1;
     flex: 1;
-    max-height: 90vh;
+    max-height: 35em;
     width: 90vw;
     max-width: 50rem;
     margin-left: auto;
@@ -78,7 +78,7 @@ p {
       width: 90vw;
       max-width: 80vw;
       margin: 0;
-      max-height: 90dvh;
+      max-height: 35em;
 
     }
 }
